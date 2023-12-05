@@ -1,10 +1,10 @@
 import React from "react";
-import { Button } from "@nextui-org/react";
+import NavBar from "./components/NavBar";
 
 export default function App() {
   return (
-    <Button color="primary" size="lg">
-      Button
-    </Button>
+    <>
+      <NavBar />
+    </>
   );
 }
