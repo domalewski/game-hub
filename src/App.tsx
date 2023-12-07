@@ -5,9 +5,9 @@ export default function App() {
   return (
     <>
       <NavBar />
-      <div className="grid grid-cols-2 gap-4">
-        <div className="hidden lg:flex">aside</div>
-        <div>
+      <div className="flex">
+        <div className="hidden lg:flex flex-none">aside</div>
+        <div className="flex-auto">
           <GameGrid />
         </div>
       </div>

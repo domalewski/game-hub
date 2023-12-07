@@ -13,10 +13,9 @@ const GameCard = ({ game }: GameCardProps) => {
           alt="Card background"
           className="object-cover rounded-sm"
           src={game.background_image}
-          width={270}
         />
-        <div className="flex flex-col">
-          <p className="text-md">{game.name}</p>
+        <div className="flex flex-col p-1">
+          <p className="text-2xl">{game.name}</p>
         </div>
       </CardBody>
     </Card>
