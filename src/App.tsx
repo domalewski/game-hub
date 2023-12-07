@@ -7,7 +7,7 @@ export default function App() {
     <>
       <NavBar />
       <div className="flex">
-        <div className="hidden lg:flex flex-none">
+        <div className="hidden lg:flex flex-none px-2">
           <GenereList />
         </div>
         <div className="flex-auto">

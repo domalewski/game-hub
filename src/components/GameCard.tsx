@@ -13,7 +13,7 @@ const GameCard = ({ game }: GameCardProps) => {
   console.log(imageUrl);
 
   return (
-    <Card className="max-w-[400px]">
+    <Card className="max-w-full">
       <CardBody className="overflow-visible p-0">
         <Image className="object-cover rounded-sm" src={imageUrl} />
         <div className="flex flex-col p-1">
