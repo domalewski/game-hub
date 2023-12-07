@@ -1,9 +1,16 @@
-import { Image } from "@nextui-org/react";
+import { Image, Spinner } from "@nextui-org/react";
 import useGenres from "../hooks/useGenres";
 import getCroppedImageUrl from "../services/image-url";
 
 const GenereList = () => {
-  const { genres } = useGenres();
+  const { genres, isLoading } = useGenres();
+
+  if (isLoading)
+    return (
+      <div className="flex items-center w-1/4">
+        <Spinner label="Loading..." size="lg" />
+      </div>
+    );
 
   return (
     <ul className="list-none flex flex-col gap-2">
