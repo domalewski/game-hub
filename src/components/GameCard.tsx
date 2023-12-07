@@ -1,6 +1,7 @@
 import { Card, CardBody, Image } from "@nextui-org/react";
 import { Game } from "../hooks/useGames";
 import PlatformIconList from "./PlatformIconList";
+import CriticsScore from "./CriticsScore";
 
 interface GameCardProps {
   game: Game;
@@ -17,9 +18,12 @@ const GameCard = ({ game }: GameCardProps) => {
         />
         <div className="flex flex-col p-1">
           <p className="text-2xl">{game.name}</p>
-          <PlatformIconList
-            platforms={game.parent_platforms.map((p) => p.platform)}
-          />
+          <div className="flex flex-row justify-between">
+            <PlatformIconList
+              platforms={game.parent_platforms.map((p) => p.platform)}
+            />
+            <CriticsScore score={game.metacritic} />
+          </div>
         </div>
       </CardBody>
     </Card>
